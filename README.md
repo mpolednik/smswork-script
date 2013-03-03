@@ -1,4 +1,4 @@
-Script to mirror SMSWork SMS entries to database
+Script to mirror SMSWork SMS entries to database built using python, sqlalchemy and mysqldb
 
 Required software
 =================
