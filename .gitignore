@@ -1,0 +1,7 @@
+.DS_store
+venv
+*.swp
+*.pyc
+.mysql.*
+.my.cnf.*
+log.txt
