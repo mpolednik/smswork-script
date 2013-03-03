@@ -9,4 +9,3 @@ Python packages
 --------------
 * MySQL-python==1.2.4
 * SQLAlchemy==0.8.0b
-* wsgiref==0.1.2
