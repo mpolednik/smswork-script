@@ -12,9 +12,9 @@ from app.receivedsms import ReceivedSMS
 
 # SENDING PROCESS
 states = ('DONE', 'ERROR')
+session = db.session
 
 def handle_sent():
-    session = db.Session()
     lines = []
 
     # Process current entries in file
@@ -98,7 +98,6 @@ def handle_sent():
             log.write(log.OK, 'outfile', 'Processed file')
 
 def handle_recv():
-    session = db.Session()
     lines = []
 
     try:
