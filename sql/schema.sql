@@ -5,9 +5,9 @@
 # http://www.sequelpro.com/
 # http://code.google.com/p/sequel-pro/
 #
-# Host: 127.0.0.1 (MySQL 5.5.29)
-# Database: maturita_sms
-# Generation Time: 2013-02-24 16:31:37 +0000
+# Host: 192.168.171.11 (MySQL 5.5.30)
+# Database: sms
+# Generation Time: 2013-03-21 14:09:45 +0000
 # ************************************************************
 
 
@@ -27,8 +27,8 @@ DROP TABLE IF EXISTS `sms_recv`;
 
 CREATE TABLE `sms_recv` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
-  `phone` varchar(16) DEFAULT NULL,
-  `text` char(160) DEFAULT NULL,
+  `phone` varchar(16) NOT NULL DEFAULT '',
+  `text` char(160) NOT NULL DEFAULT '',
   `ts` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00' ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -42,8 +42,8 @@ DROP TABLE IF EXISTS `sms_send`;
 
 CREATE TABLE `sms_send` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
-  `phone` varchar(16) DEFAULT NULL,
-  `text` varchar(1600) DEFAULT NULL,
+  `phone` varchar(16) NOT NULL DEFAULT '',
+  `text` varchar(1600) NOT NULL DEFAULT '',
   `ts` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `owner` varchar(200) DEFAULT '',
   `state` int(11) NOT NULL DEFAULT '0',

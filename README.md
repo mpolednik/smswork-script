@@ -19,10 +19,10 @@ Maturita SMS server
 ===================
 Connect to remote database
 
-* Server: <server ip>
+* Server: 95.82.149.75
 * Username: <your_username>
 * Password: <your_password>
-* Port: <server port>
+* Port: 9999
 
 To send new message...
 
@@ -34,27 +34,22 @@ Required values
     text - Char(160)
 
     Send message to 600600600 containing text 'Hello World!' from user root
-    INSERT INTO sms_send(phone, text, owner) VALUES('600600600', 'Hello World!', root);
+    INSERT INTO sms_send(phone, text) VALUES('600600600', 'Hello World!');
 
 To fetch information about the sent message
 
 Select requested information from the table **sms_send**
 
-Table structure
+Available data
 
     id - Char(200)
-    phone - Char(200)
-    text - Char(200)
     ts - Char(200)
-    owner - Char(200)
     state - Char(200)
         0 - unprocessed
         1 - processed
         2 - sent
         3 - error
 
-    Send message to 600600600 containing text 'Hello World!' from user root
-    INSERT INTO sms_send(phone, text, owner) VALUES('600600600', 'Hello World!', root);
 
 To fetch received messages...
 
